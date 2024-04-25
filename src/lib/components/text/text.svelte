@@ -5,18 +5,16 @@
 	const text = cva('', {
 		variants: {
 			variant: {
-				'bg-h1': 'text-4xl font-bold',
-				'bg-h2': 'text-3xl font-bold',
-				'bg-h3': 'text-2xl font-bold',
-				'bg-h4': 'text-xl font-bold',
-				'bg-h5': 'text-lg font-bold',
-				'bg-b1': 'text-base font-normal',
-				'bg-b2': 'text-sm font-normal',
-				'bg-b3': 'text-xs font-normal',
-				'bg-b4': 'text-xs font-light',
-				'bg-b5': 'text-xs font-light',
-				'bg-b1-light': 'text-base font-light',
-				'bg-b2-light': 'text-sm font-light'
+				h1: 'text-4xl font-bold',
+				h2: 'text-3xl font-bold',
+				h3: 'text-2xl font-bold',
+				h4: 'text-xl font-bold',
+				h5: 'text-lg font-bold',
+				b1: 'text-base font-normal',
+				b2: 'text-sm font-normal',
+				b3: 'text-xs font-normal',
+				b4: 'text-xs font-light',
+				b5: 'text-xs font-light'
 			}
 		}
 	});
@@ -24,24 +22,22 @@
 	interface $$Props extends HTMLButtonAttributes, VariantProps<typeof text> {}
 
 	type TTextVariants = VariantProps<typeof text>['variant'];
-	export let variant: TTextVariants = 'bg-b1';
+	export let variant: TTextVariants = 'b1';
 
 	const variantToHtmlElementMap: Record<NonNullable<TTextVariants>, string> = {
-		'bg-h1': 'h1',
-		'bg-h2': 'h2',
-		'bg-h3': 'h3',
-		'bg-h4': 'h4',
-		'bg-h5': 'h5',
-		'bg-b1': 'p',
-		'bg-b2': 'p',
-		'bg-b3': 'p',
-		'bg-b4': 'p',
-		'bg-b5': 'p',
-		'bg-b1-light': 'p',
-		'bg-b2-light': 'p'
+		h1: 'h1',
+		h2: 'h2',
+		h3: 'h3',
+		h4: 'h4',
+		h5: 'h5',
+		b1: 'p',
+		b2: 'p',
+		b3: 'p',
+		b4: 'p',
+		b5: 'p'
 	};
 
-	let textVariant = variantToHtmlElementMap[variant ?? 'bg-b1'];
+	let textVariant = variantToHtmlElementMap[variant ?? 'b1'];
 </script>
 
 <!-- render different html elements depending on the variant passed as prop -->
