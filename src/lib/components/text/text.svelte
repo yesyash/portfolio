@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { cx, type VariantProps } from 'class-variance-authority';
+	import { type VariantProps } from 'class-variance-authority';
 	import { textStyles } from './text-styles';
 	import type { TClass } from '../common/class.type';
+	import { cn } from '../../../utils/classname';
 
 	interface $$Props extends VariantProps<typeof textStyles>, TClass {}
 
@@ -30,6 +31,6 @@
 </script>
 
 <!-- render different html elements depending on the variant passed as prop -->
-<svelte:element this={textVariant} class={cx(textStyles({ variant }), $$props.class)}>
+<svelte:element this={textVariant} class={cn(textStyles({ variant }), $$props.class)}>
 	<slot />
 </svelte:element>

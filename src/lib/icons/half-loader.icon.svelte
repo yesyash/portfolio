@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { cx } from 'class-variance-authority';
+	import { cn } from '../../utils/classname';
 
 	interface $$Props {
 		class?: string;
 	}
 </script>
 
-<svg viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" class={cx($$props.class)}>
+<svg viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" class={cn($$props.class)}>
 	<path
 		d="M16 3.1665V8.49984"
 		stroke="#1C1917"

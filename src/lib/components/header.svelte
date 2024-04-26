@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { cx } from 'class-variance-authority';
 	import { textStyles } from './text/text-styles';
 	import HalfLoader from '$lib/icons/half-loader.icon.svelte';
+	import { cn } from '../../utils/classname';
 
 	type TLink = {
 		id: string;
@@ -39,7 +39,7 @@
 				<li>
 					<a
 						href={link.route}
-						class={cx(
+						class={cn(
 							textStyles({ variant: link.id === 'get-in-touch' ? 'b2' : 'b2-light' }),
 							link.id === 'get-in-touch' && 'px-4 py-2 -mx-2 bg-blue-100 rounded-lg text-blue-700'
 						)}>{link.label}</a
