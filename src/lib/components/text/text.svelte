@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { cva, type VariantProps, cx } from 'class-variance-authority';
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import { cx, type VariantProps } from 'class-variance-authority';
 	import { textStyles } from './text-styles';
+	import type { TClass } from '../common/class.type';
 
-	interface $$Props extends HTMLButtonAttributes, VariantProps<typeof textStyles> {}
+	interface $$Props extends VariantProps<typeof textStyles>, TClass {}
 
 	type TTextVariants = VariantProps<typeof textStyles>['variant'];
 	export let variant: TTextVariants = 'b1';
